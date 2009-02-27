@@ -39,7 +39,7 @@ simple Ieee80211Radio
         double thermalNoise @unit("dBm") = default(-110dBm); // base noise level (dBm)
         double pathLossAlpha = default(2); // used by the path loss calculation
         double snirThreshold @unit("dB") = default(4dB); // if signal-noise ratio is below this threshold, frame is considered noise (in dB)
-        double sensitivity @unit("mW"); // received signals with power below sensitivity are ignored
+        double sensitivity @unit("dBm"); // received signals with power below sensitivity are ignored
         @display("i=block/wrxtx");
     gates:
         input uppergateIn;   // from higher layer protocol (MAC)

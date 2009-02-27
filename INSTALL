@@ -6,12 +6,8 @@ The INET Framework can be compiled on any platform supported by OMNeT++.
 PREREQUISITES
 
 You should have a working OMNeT++ installation, version 4.0 or later.
-It must be compiled with dynamic NED loading enabled (WITH_NETBUILDER=yes
-setting).
 
-LINUX (UNIX)
-
-1. Make sure you OMNeT++ installation works OK (e.g. try running the samples)
+1. Make sure your OMNeT++ installation works OK (e.g. try running the samples)
    and it is in the path (to test, try the command "which nedtool").
 
 2. Change to the INET directory.
@@ -26,9 +22,10 @@ Finally, try running the demo simulations. Change into examples/ and type
 
 Note:
 -----
-If you add/remove files/directories later in the src directory, they will 
-be added automatically to the makefile. 
+If you add/remove files/directories later in the src directory, you should regenerate 
+your makefile in the src directory with:
 
-WINDOWS
+opp_makemake -f --deep --make-so -o inet -O out
 
-TODO
+If you are using the IDE, it will do it for you. You don't have to do anything.
+
